@@ -23,3 +23,16 @@ subfinder -all -d target.com -silent | waybackurls | gf redirect | qsreplace 'ht
 ```
 cat hosts.txt | httpx -ports 80,443,8080,8443,8090 -path /web-console/ -status-code -title -nc -t 250 -mc 200 
 ```
+
+## RANDOM BUG BOUNTY HUNTING (Special tweet from Orwa Atyat) :)
+
+```
+**OKTA**
+http://okta.com password NOT help.okta NOT developer.okta NOT support.okta NOT www.okta
+**ServiceNOW**
+service-now password
+**Jfrog**
+http://jfrog.io password
+**onelogin**
+http://onelogin.com password
+```
