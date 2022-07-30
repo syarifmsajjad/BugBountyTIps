@@ -17,3 +17,9 @@ assetfinder -subs-only domain.com | waybackurls | grep "=" | kxss | sed 's/=.*/=
 ```
 subfinder -all -d target.com -silent | waybackurls | gf redirect | qsreplace 'http://example.com' | httpx -fr -title -match-string 'Example Domain'
 ```
+
+## ADMIN PANEL
+
+```
+cat hosts.txt | httpx -ports 80,443,8080,8443,8090 -path /web-console/ -status-code -title -nc -t 250 -mc 200 
+```
