@@ -36,3 +36,11 @@ http://jfrog.io password
 **onelogin**
 http://onelogin.com password
 ```
+
+## XSS PARAMSPIDER + GF XSS + DALFOX
+
+```
+python paramspider --domain target.com -o output
+cat output | gf xss > gf_xss.txt
+cat gf_xss.txt | dalfox -b yoursite.xss.ht
+```
