@@ -44,3 +44,8 @@ python paramspider --domain target.com -o output
 cat output | gf xss > gf_xss.txt
 cat gf_xss.txt | dalfox -b yoursite.xss.ht
 ```
+## SHODAN + NUCLEI = JUICY CVE
+
+```
+echo 'ssl:"dell.com" 200' | uncover -e shodan | httpx -silent | nuclei --severity medium,high,critical
+```
