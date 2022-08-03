@@ -49,3 +49,8 @@ cat gf_xss.txt | dalfox -b yoursite.xss.ht
 ```
 echo 'ssl:"dell.com" 200' | uncover -e shodan | httpx -silent | nuclei --severity medium,high,critical
 ```
+## GIT DORKS
+
+```
+https://github.com/search?o=desc&q=att.com&s=indexed&type=Code
+```
