@@ -27,14 +27,26 @@ cat hosts.txt | httpx -ports 80,443,8080,8443,8090 -path /web-console/ -status-c
 ## RANDOM BUG BOUNTY HUNTING (Special tweet from Orwa Atyat) :)
 
 ```
-**OKTA**
-http://okta.com password NOT help.okta NOT developer.okta NOT support.okta NOT www.okta
-**ServiceNOW**
+*OKTA*
+okta.com password NOT help.okta NOT developer.okta NOT support.okta NOT www.okta
+*ServiceNOW*
 service-now password
-**Jfrog**
-http://jfrog.io password
-**onelogin**
-http://onelogin.com password
+*Jfrog*
+jfrog.io password
+*onelogin*
+onelogin.com password
+*Atlassian*
+atlassian.net password NOT domain.atlassian NOT user.atlassian NOT help.atlassian NOT
+*Snow..*
+snowflakecomputing.com password
+*Slack*
+slack.com  password
+*Zendesk*
+zendesk.com password NOT www.zendesk
+*SharePoint*
+sharepoint.com password
+*Auth0*
+auth0.com password NOT docs.auth0
 ```
 
 ## XSS PARAMSPIDER + GF XSS + DALFOX
