@@ -66,3 +66,9 @@ echo 'ssl:"dell.com" 200' | uncover -e shodan | httpx -silent | nuclei --severit
 ```
 https://github.com/search?o=desc&q=att.com&s=indexed&type=Code
 ```
+
+## WP OPEN REDIRECT
+
+```
+ cat status.txt | grep "WordPress" | cut -d ' ' -f1 | httpx -path "/?aiowpsec_do_log_out=1&after_logout=https://evil.com" -sc --title -location
+```
